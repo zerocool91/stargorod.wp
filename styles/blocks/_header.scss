@@ -1,0 +1,96 @@
+header {
+  font-size: 18px;
+  position: absolute;
+  width: 100%;
+  top: 24px;
+  z-index: 99;
+}
+
+.navigation {
+  min-height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+
+  &__top {
+    background-color: $colorSecondary;
+    color: $colorPrimary;
+    padding-right: 20px;
+  }
+
+  &__bottom {
+    color: $colorSecondary;
+    background-color: $colorPrimary;
+  }
+
+  &__phone-number span {
+    display: block;
+  } 
+}
+
+.toggler__button {
+  align-items: center;
+  justify-content: center;
+  background-color: $colorSecondary;
+  width: 76px;
+  height: 108px;
+  border: none;
+  display: none;
+}
+
+.menu {
+  @include resetList;
+
+  &-item {
+    display: inline-block;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      padding: 17px 35px;
+      text-transform: capitalize;
+    }
+
+    &-has-children::after {
+      content: url('../img/menu-row.png');
+      display: inline-block;
+      position: absolute;
+      right: 15px;
+      top: 0;
+    }
+  }
+
+  &__top .menu-item a {
+    @include lighten($colorSecondary);
+  }
+
+  &__bottom >.menu-item > a {
+    @include darken($colorPrimary);
+  }
+
+  .sub-menu {
+    position: absolute;
+    width: 200px;
+    background-color: $colorPrimary;
+    padding: 0;
+    top: 38px;
+    z-index: -1;
+    visibility: hidden;
+    .menu-item {
+      display: block;
+
+      a {
+        padding: 17px 35px;
+        display: block;  
+        @include darken($colorPrimary);
+      }
+    }
+  }
+  
+  .menu-item-has-children:hover .sub-menu {
+    visibility: visible;
+    z-index: 0;
+  }
+}

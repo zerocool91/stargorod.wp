@@ -1,0 +1,49 @@
+.cta {
+  padding-top: 55px;
+
+  &-list {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 17px;
+    margin-top: 24px;
+
+    &_item {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 30px;
+        flex-shrink: 0;
+      }
+
+      .icon.call {
+        background-color: rgba($colorRed1, 0.15);
+      }
+
+      .icon.action {
+        background-color: rgba($colorSecondary, 0.15);
+      }
+
+      .content {
+        font-size: 20px;
+      }
+
+      .content.call {
+        color: $colorRed1;
+      }
+
+      .content.action {
+        color: $colorSecondary;
+      }
+
+      .smaller {
+        font-size: 16px;
+      }
+    }
+  }
+}

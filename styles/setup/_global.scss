@@ -1,0 +1,70 @@
+body {
+  font-family: $fontPrimary;
+  font-size: $fsContent;
+  background-color: $bodyBgColor;
+}
+
+.cta-text {
+  font-size: 26px;
+  color: $colorSecondary;
+  display: inline-block;
+  max-width: 205px;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: $colorWhite;
+  padding: 12px 24px;
+  background-color: $colorRed1;
+  border-radius: 4px;
+  @include lighten($colorRed1);
+  border: none;
+  cursor: pointer;
+}
+
+.flex-middle-justify {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.relative {
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1136px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-title {
+  font-weight: 300;
+  font-size: 40px;
+  color: $colorSecondary;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.red {
+  background-color: $colorRed1;
+  border-radius: 4px;
+  padding: 0 9px;
+}
+
+.cell {
+  z-index: 2;
+}
+
+.owl-carousel .owl-item {
+  max-height: 255px;
+
+  img {
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+  }
+}

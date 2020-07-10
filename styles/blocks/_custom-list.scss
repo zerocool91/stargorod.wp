@@ -1,0 +1,56 @@
+.custom-list {
+  position: relative;
+  top: -250px;
+  margin-bottom: -200px;
+  right: 0;
+  border-radius: 4px;
+  @include boxShadow;
+
+  .list-title {
+    margin: 0;
+    font-size: 26px;
+    color: $colorSecondary;
+    background-color: $colorWhite;
+    padding: 13px 47px;
+    border-radius: 4px 4px 0 0;
+  }
+  ul {
+    @include resetList;
+
+    li {
+      background-color: $colorSecondary;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: #fff;
+        opacity: 0.2;
+        transform: rotate(45deg);
+        top: 33px;
+        left: 25px;
+      }
+
+
+      &:last-child a {
+        border-bottom: none;
+        padding-bottom: 40px;
+      }
+
+      &:hover {
+        @include lighten($colorSecondary);
+      }
+
+      a {
+        display: block;
+        color: $colorWhite;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 28px 47px 6px;
+        border-bottom: 1px solid rgba( $colorWhite, 0.2);
+      }
+    }
+  }
+}

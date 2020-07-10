@@ -1,0 +1,23 @@
+.prices {
+    &__text {
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 300;
+        margin: 0 0 11px;
+        display: inline-block;
+    }
+
+    .disclaimer {
+        font-size: 14px;
+        line-height: 21px;
+        opacity: 0.8;
+    }
+
+    &__margin--bottom {
+        margin-bottom: 14px;
+    }
+
+    &__margin--top {
+        margin-top: 51px;
+    }
+}

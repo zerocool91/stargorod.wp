@@ -1,0 +1,25 @@
+.hero {
+  background-blend-mode: darken;
+  height: 608px;
+  background-size: cover;
+  padding-bottom: 96px;
+  background-attachment: fixed;
+
+  .grid-container {
+    height: 100%;
+
+    .grid-x {
+      height: 100%;
+      align-items: flex-end;
+      position: relative;
+    }
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 56px;
+    color: $colorWhite;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.55);
+    max-width: 405px;
+  }
+}
